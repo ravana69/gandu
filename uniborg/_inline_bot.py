@@ -219,7 +219,7 @@ if Config.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
     async def on_plug_in_callback_query_handler(event):
         if event.query.user_id == borg.uid:  # pylint:disable=E0602
             current_page_number = int(
-                event.data_match.group(0).decode("UTF-8"))
+                event.data_match.group(1).decode("UTF-8"))
             buttons = paginate_help(
                 current_page_number + 1, borg._plugins, "helpme")
             # https://t.me/TelethonChat/115200
@@ -234,7 +234,7 @@ if Config.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
     async def on_plug_in_callback_query_handler(event):
         if event.query.user_id == borg.uid:  # pylint:disable=E0602
             current_page_number = int(
-                event.data_match.group(0).decode("UTF-8"))
+                event.data_match.group(1).decode("UTF-8"))
             buttons = paginate_help(
                 current_page_number - 1,
                 borg._plugins,  # pylint:disable=E0602
