@@ -107,7 +107,7 @@ if Config.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                     result = builder.article(
                         "YTDL Errors © @UniBorg",
                         text=f"{error_message} Powered by @UniBorg",
-                        link_preview=False
+                        link_preview=True
                     )
                 elif t_response:
                     x_reponse = t_response
@@ -117,7 +117,7 @@ if Config.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                     save_ytdl_json_path = Config.TMP_DOWNLOAD_DIRECTORY + \
                         "/" + "YouTubeDL" + ".json"
                     with open(save_ytdl_json_path, "w", encoding="utf8") as outfile:
-                        json.dump(response_json, outfile, ensure_ascii=False)
+                        json.dump(response_json, outfile, ensure_ascii=True)
                     # logger.info(response_json)
                     inline_keyboard = []
                     duration = None
@@ -208,7 +208,7 @@ if Config.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                         "✳️Fork Boost✳️", "tg://some_unsupported_feature"), custom.Button.url(
                         "♻️Refresh Heroku♻️", "tg://chutiya")]
                 ],
-                link_preview=False
+                link_preview=True
             )
         await event.answer([result] if result else None)
 
