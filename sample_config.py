@@ -115,7 +115,7 @@ class Config(object):
     #
     GROUP_REG_SED_EX_BOT_S = os.environ.get("GROUP_REG_SED_EX_BOT_S", r"(regex|moku|BananaButler_|rgx|l4mR)bot")
     # FFMpeg
-    FF_MPEG_DOWN_LOAD_MEDIA_PATH = "uniborg.media.ffmpeg"
+    FF_MPEG_DOWN_LOAD_MEDIA_PATH = "ffmpeg"
 
 
 class Production(Config):
